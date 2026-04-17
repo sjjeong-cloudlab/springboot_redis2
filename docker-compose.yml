@@ -34,7 +34,7 @@ services:
     ports:
       - "80:80"
     volumes: # host의 nginx.conf를 컨테이너의 nginx.conf로 마운트
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - app-1
       - app-2
